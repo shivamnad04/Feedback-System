@@ -8,7 +8,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://root:root@cluster0.5lam1mo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    process.env.MONGODB_URI
   )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error(err));
